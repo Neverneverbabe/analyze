@@ -124,13 +124,13 @@ export default function Home() {
         <div className="flex items-center gap-2 w-full max-w-2xl mx-auto">
           <Logo className="w-6 h-6" />
           <h1 className="text-md font-medium">
-            Analyst by{" "}
+            Analyst powered by&nbsp;
             <a
-              href="https://e2b.dev"
+              href="https://github.com/open-webui/open-webui"
               target="_blank"
               className="underline decoration-[rgba(229,123,0,.3)] decoration-2 text-[#ff8800]"
             >
-              E2B
+              Open&nbsp;WebUI
             </a>
           </h1>
           <RepoBanner />

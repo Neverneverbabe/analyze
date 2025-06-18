@@ -1,9 +1,9 @@
-# AI Analyst by E2B
-This is an AI-powered code and data analysis tool built with Next.js and the [E2B SDK](https://e2b.dev/docs).
+# AI Analyst
+This is an AI-powered code and data analysis tool built with Next.js. The default setup now uses [Open WebUI](https://github.com/open-webui/open-webui) with [Ollama](https://ollama.com/) for running models.
 
 ![Preview](preview.png)
 
-→ Try on [ai-analyst.e2b.dev](https://ai-analyst.e2b.dev/)
+→ Try on [Open WebUI](https://github.com/open-webui/open-webui)
 
 ## Features
 - 🔸 Analyze data with Meta's Llama 3.1
@@ -11,7 +11,6 @@ This is an AI-powered code and data analysis tool built with Next.js and the [E2
 - 🔸 Create interactive charts
 
 **Powered by:**
-- 🔸 ✶ [E2B Sandbox](https://github.com/e2b-dev/code-interpreter)
 - 🔸 Vercel's AI SDK
 - 🔸 Next.js
 - 🔸 echarts library for interactive charts
@@ -42,15 +41,17 @@ git clone https://github.com/e2b-dev/ai-analyst.git
 cd fragments && npm i
 ```
 
-### 3. Get API keys
-Copy `.example.env` to `.env.local` and fill in variables for E2B and one LLM provider.
+### 3. Configure Open WebUI
+Copy `.example.env` to `.env.local` and fill in variables for Open WebUI and one LLM provider.
 
-E2B: `E2B_API_KEY`
+Open WebUI: `OPENWEBUI_BASE_URL`
 
-- Get your [E2B API key here](https://e2b.dev/dashboard?tab=keys).
+- Example using Docker:
+  ```bash
+  docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama
+  ```
 
 LLM Providers:
-
 - Fireworks: `FIREWORKS_API_KEY`
 - Together AI: `TOGETHER_API_KEY`
 - Ollama: `OLLAMA_BASE_URL`
