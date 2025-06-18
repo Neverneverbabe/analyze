@@ -1,0 +1,9 @@
+# Ignore Python cache and environment files
+__pycache__/
+*.py[cod]
+
+# Ignore uploaded data and analysis output
+uploads/
+
+# Ignore OS files
+.DS_Store
