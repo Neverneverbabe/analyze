@@ -1,0 +1,94 @@
+{
+  "models": [
+    {
+      "id": "claude-opus-4-20250514",
+      "provider": "Anthropic",
+      "providerId": "anthropic",
+      "name": "Claude Opus 4"
+    },
+    {
+      "id": "claude-sonnet-4-20250514",
+      "provider": "Anthropic",
+      "providerId": "anthropic",
+      "name": "Claude Sonnet 4"
+    },
+    {
+      "id": "models/gemini-2.5-flash-preview-05-20",
+      "provider": "Google Generative AI",
+      "providerId": "google",
+      "name": "Gemini 2.5 Flash Preview 05-20"
+    },
+    {
+      "id": "models/gemini-2.5-pro-preview-05-06",
+      "provider": "Google Generative AI",
+      "providerId": "google",
+      "name": "Gemini 2.5 Pro Preview 05-06"
+    },
+    {
+      "id": "o3",
+      "provider": "OpenAI",
+      "providerId": "openai",
+      "name": "o3"
+    },
+    {
+      "id": "o3-mini",
+      "provider": "OpenAI",
+      "providerId": "openai",
+      "name": "o3-mini"
+    },
+    {
+      "id": "o4-mini",
+      "provider": "OpenAI",
+      "providerId": "openai",
+      "name": "o4-mini"
+    },
+    {
+      "id": "gpt-4.1",
+      "provider": "OpenAI",
+      "providerId": "openai",
+      "name": "GPT-4.1"
+    },
+    {
+      "id": "o1",
+      "provider": "OpenAI",
+      "providerId": "openai",
+      "name": "o1"
+    },
+    {
+      "id": "accounts/fireworks/models/llama4-maverick-instruct-basic",
+      "provider": "Fireworks",
+      "providerId": "fireworks",
+      "name": "Llama 4 Maverick Instruct"
+    },
+    {
+      "id": "accounts/fireworks/models/llama4-scout-instruct-basic",
+      "provider": "Fireworks",
+      "providerId": "fireworks",
+      "name": "Llama 4 Scout Instruct"
+    },
+    {
+      "id": "accounts/fireworks/models/llama-v3p1-405b-instruct",
+      "provider": "Fireworks",
+      "providerId": "fireworks",
+      "name": "Llama 3.1 405B"
+    },
+    {
+      "id": "accounts/fireworks/models/deepseek-r1",
+      "provider": "Fireworks",
+      "providerId": "fireworks",
+      "name": "DeepSeek R1"
+    },
+    {
+      "id": "accounts/fireworks/models/qwen3-30b-a3b",
+      "provider": "Fireworks",
+      "providerId": "fireworks",
+      "name": "Qwen3 30B-A3B"
+    },
+    {
+      "id": "accounts/fireworks/models/qwen3-235b-a22b",
+      "provider": "Fireworks",
+      "providerId": "fireworks",
+      "name": "Qwen3 235B-A22B"
+    }
+  ]
+}
