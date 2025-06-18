@@ -1,7 +1,4 @@
 import { CustomFiles } from "@/lib/types";
-import Sandbox from "@e2b/code-interpreter";
-
-const sandboxTimeout = 10 * 60 * 1000; // 10 minute in ms
 
 export const maxDuration = 60;
 
@@ -23,24 +20,27 @@ export async function POST(req: Request) {
     }
   }
 
-  const sandbox = await Sandbox.create({
-    apiKey: process.env.E2B_API_KEY,
-    timeoutMs: sandboxTimeout,
+  const baseURL = process.env.OPENWEBUI_BASE_URL || "http://localhost:3000";
+  const apiKey = process.env.OPENWEBUI_API_KEY;
+  const model = process.env.OLLAMA_MODEL || "llama3";
+
+  const response = await fetch(`${baseURL}/v1/chat/completions`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...(apiKey ? { Authorization: `Bearer ${apiKey}` } : {}),
+    },
+    body: JSON.stringify({
+      model,
+      messages: [
+        { role: "system", content: "You are a python interpreter." },
+        { role: "user", content: code },
+      ],
+      stream: false,
+    }),
   });
 
-  // Upload files
-  for (const file of files) {
-    await sandbox.files.write(file.name, file.content);
-  }
+  const result = await response.json();
 
-  const { text, results, logs, error } = await sandbox.runCode(code);
-
-  return new Response(
-    JSON.stringify({
-      text,
-      results,
-      logs,
-      error,
-    })
-  );
+  return new Response(JSON.stringify(result));
 }
